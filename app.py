@@ -54,7 +54,8 @@ if submitted:
 
     try:
         url = "https://fastapi-churn-app.onrender.com/predict"
-        response = requests.post(url, json=payload)
+        headers = {"Content-Type": "application/json"}
+        response = requests.post(url, json=payload, headers=headers)
 
         if response.status_code == 200:
             resultado = response.json()
