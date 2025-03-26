@@ -53,7 +53,7 @@ if submitted:
     }
 
     try:
-        url = "https://fastapi-churn-app.onrender.com/predict"
+        url = "https://fastapi-churn-app.onrender.com"
         response = requests.post(url, json=payload)
 
         if response.status_code == 200:
